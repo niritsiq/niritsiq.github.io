@@ -1,0 +1,78 @@
+.section {
+    position: relative;
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, rgba(252, 228, 236, 0.9), rgba(248, 187, 208, 0.9));
+}
+
+.honors-trophy {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    opacity: 0.15;
+    filter: grayscale(0.5);
+    transition: all 0.3s ease;
+}
+
+.trophy-1 {
+    top: 20%;
+    left: 10%;
+    animation: float 6s ease-in-out infinite;
+}
+
+.trophy-2 {
+    top: 40%;
+    right: 15%;
+    animation: float 6s ease-in-out infinite 1s;
+}
+
+.awards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.award-card {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.award-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.award-icon {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.award-card:hover .award-icon {
+    transform: scale(1.1) rotate(10deg);
+}
+
+.award-date {
+    color: #666;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}

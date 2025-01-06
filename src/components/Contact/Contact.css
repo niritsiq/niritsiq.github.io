@@ -1,0 +1,111 @@
+.section {
+    min-height: 50vh;
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    padding: 4rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-wrapper {
+    max-width: 900px;
+    width: 100%;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 3rem;
+    text-align: center;
+}
+
+.contact-header {
+    margin-bottom: 2rem;
+}
+
+.contact-header h1 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    font-weight: 700;
+    margin: 0;
+}
+
+.contact-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.contact-item:hover {
+    transform: translateY(-2px);
+    color: #2196F3;
+}
+
+.contact-icon {
+    font-size: 1.2rem;
+    color: #2196F3;
+}
+
+.contact-item span {
+    font-size: 1.1rem;
+    color: #2c3e50;
+}
+
+.contact-divider {
+    color: #cbd5e0;
+    font-weight: 300;
+    display: none;
+}
+
+.linkedin-link {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.linkedin-link:hover {
+    color: #0077b5;
+}
+
+/* Show dividers on larger screens */
+@media (min-width: 768px) {
+    .contact-divider {
+        display: block;
+    }
+
+    .contact-info {
+        gap: 1.5rem;
+    }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .contact-wrapper {
+        padding: 2rem 1rem;
+    }
+
+    .contact-header h1 {
+        font-size: 2rem;
+    }
+
+    .contact-info {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .contact-item {
+        width: 100%;
+        justify-content: center;
+    }
+}
