@@ -3,7 +3,9 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <title>Nir Itzik - Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
@@ -1821,6 +1823,163 @@
         #education li:before {
             display: none;
         }
+
+        /* Previous styles... */
+
+        /* Update mobile responsive styles */
+        @media (max-width: 768px) {
+
+            /* Header adjustments */
+            header h1 {
+                font-size: 2.5rem;
+                padding: 0 1rem;
+            }
+
+            header p {
+                font-size: 1.2rem;
+                padding: 0 1rem;
+            }
+
+            /* Navigation menu adjustments */
+            .nav-menu {
+                padding: 0.5rem;
+                height: auto;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+            }
+
+            .nav-menu ul {
+                display: flex;
+                flex-direction: row;
+                /* Keep horizontal on mobile */
+                padding: 0 1rem;
+                margin: 0;
+                white-space: nowrap;
+            }
+
+            .nav-menu li {
+                margin: 0 0.5rem;
+            }
+
+            .nav-menu a {
+                padding: 0.5rem 0.8rem;
+                font-size: 0.9rem;
+            }
+
+            /* Skills section adjustments */
+            .skills-hexagon-grid {
+                grid-template-columns: 1fr;
+                padding: 1rem;
+            }
+
+            .hexagon {
+                width: 100%;
+                max-width: 280px;
+                margin: 0 auto;
+            }
+
+            /* Projects section adjustments */
+            .projects-showcase {
+                grid-template-columns: 1fr;
+                padding: 1rem;
+            }
+
+            .project-showcase-card {
+                width: 100%;
+                margin: 0 auto 1rem;
+            }
+
+            /* Experience timeline adjustments */
+            .experience-timeline::before {
+                left: 20px;
+            }
+
+            .experience-card {
+                margin-left: 40px;
+                padding: 1rem;
+            }
+
+            .experience-icon {
+                left: -40px;
+                width: 35px;
+                height: 35px;
+                font-size: 1rem;
+            }
+
+            /* Hobbies grid adjustments */
+            .hobbies-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+                padding: 1rem;
+            }
+
+            .hobby-card {
+                padding: 1rem;
+            }
+
+            .hobby-card i {
+                font-size: 2rem;
+            }
+
+            .hobby-card h3 {
+                font-size: 1.2rem;
+            }
+
+            /* Section spacing and padding */
+            .section {
+                padding: 60px 1rem;
+            }
+
+            .container {
+                padding: 0 1rem;
+            }
+
+            /* Typography adjustments */
+            h2 {
+                font-size: 2rem !important;
+            }
+
+            h3 {
+                font-size: 1.3rem !important;
+            }
+
+            p {
+                font-size: 1rem !important;
+            }
+
+            /* Contact info adjustments */
+            .contact-info {
+                flex-direction: column;
+                gap: 0.5rem;
+                padding: 0 1rem;
+            }
+
+            .separator {
+                display: none;
+            }
+
+            /* Fix for iOS Safari 100vh issue */
+            .section,
+            header {
+                min-height: -webkit-fill-available;
+            }
+        }
+
+        /* Add iOS-specific fixes */
+        @supports (-webkit-touch-callout: none) {
+
+            .section,
+            header {
+                min-height: -webkit-fill-available;
+            }
+
+            /* Fix for iOS momentum scrolling */
+            body {
+                -webkit-overflow-scrolling: touch;
+            }
+        }
+
+        /* Add these meta tags to the head section */
     </style>
 </head>
 
