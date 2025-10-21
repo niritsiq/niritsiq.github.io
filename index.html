@@ -1120,9 +1120,14 @@
 
         .project-header {
             background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            padding: 2rem;
+            padding: 2.5rem 2rem;
             text-align: center;
             color: white;
+            min-height: 280px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
         }
 
         .project-icon {
@@ -1131,11 +1136,14 @@
         }
 
         .project-icon-image {
-            width: 120px;
-            height: 120px;
+            width: 150px;
+            height: 150px;
             object-fit: contain;
             margin-bottom: 1rem;
-            filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+            background: white;
+            padding: 10px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
         .project-header h3 {
@@ -1155,19 +1163,21 @@
 
         .project-description {
             color: var(--dark-color);
-            margin-bottom: 1.5rem;
+            margin-bottom: 4rem;
             line-height: 1.6;
             text-align: center;
+            padding-bottom: 1rem;
         }
 
         .project-tech {
             display: flex;
             justify-content: center;
             gap: 0.5rem;
+            flex-wrap: wrap;
             position: absolute;
             bottom: 5.5rem;
-            left: 0;
-            right: 0;
+            left: 1rem;
+            right: 1rem;
         }
 
         .tech-badge {
