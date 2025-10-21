@@ -23,7 +23,7 @@ const Projects = () => {
             title: 'Gear-Lens App',
             description: 'A full-stack PWA app that recognizes cars in real time using AI. Users can collect cars, compete in challenges, and join leagues with friends. Built with React, Node.js, and SQLite, featuring image recognition, leaderboards, and virtual car upgrades.',
             customImage: '/images/gear-lens-logo.png',
-            technologies: ['React', 'Node.js', 'SQLite', 'AI/ML', 'Mobile'],
+            technologies: ['React', 'Node.js', 'SQLite', 'OpenAI Vision API''AI/ML', 'Google OAuth', 'PWA'],
             githubLink: 'https://github.com/Gear-Lens/App-independent/tree/improvements'
         }
     ];
