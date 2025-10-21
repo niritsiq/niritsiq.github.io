@@ -2,11 +2,15 @@ import React from 'react';
 import './ProjectCard.css';
 import { FaGithub } from 'react-icons/fa';
 
-const ProjectCard = ({ title, description, icon, technologies, githubLink }) => {
+const ProjectCard = ({ title, description, icon, customImage, technologies, githubLink }) => {
     return (
         <div className="project-showcase-card" data-aos="fade-up">
             <div className="project-header">
-                <i className={`project-icon ${icon}`}></i>
+                {customImage ? (
+                    <img src={customImage} alt={title} className="project-icon-image" />
+                ) : (
+                    <i className={`project-icon ${icon}`}></i>
+                )}
                 <h3>{title}</h3>
             </div>
             <div className="project-content">

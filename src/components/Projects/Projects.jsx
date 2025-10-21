@@ -18,6 +18,13 @@ const Projects = () => {
             icon: 'fas fa-fish',
             technologies: ['Jack', 'Game Development', '2-Player'],
             githubLink: 'https://github.com/niritsiq/CatFishGame'
+        },
+        {
+            title: 'Gear-Lens App',
+            description: 'A full-stack PWA app that recognizes cars in real time using AI. Users can collect cars, compete in challenges, and join leagues with friends. Built with React, Node.js, and SQLite, featuring image recognition, leaderboards, and virtual car upgrades.',
+            customImage: '/images/gear-lens-logo.png',
+            technologies: ['React', 'Node.js', 'SQLite', 'AI/ML', 'Mobile'],
+            githubLink: 'https://github.com/Gear-Lens/App-independent/tree/improvements'
         }
     ];
 
