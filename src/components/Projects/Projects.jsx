@@ -56,12 +56,12 @@ const Projects = () => {
     ];
 
     return (
-        <section id="projects" className="section">
-            <div className="container">
+        <section id="projects" className="section projects-section">
+            <div className="projects-container">
                 <img
                     src="https://cdn-icons-png.flaticon.com/512/2620/2620735.png"
                     alt="Projects"
-                    className="section-image"
+                    className="projects-section-image"
                     data-aos="zoom-in"
                 />
                 <h2 data-aos="fade-down">My Projects</h2>
