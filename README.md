@@ -1,40 +1,31 @@
-# niritsiq.github.io
-Nir Itzik's Portfolio Website
-Welcome to my personal portfolio website, hosted on GitHub Pages. This website showcases my skills, projects, and experiences as a tech enthusiast and aspiring entrepreneur.
+# niritsiq.github.io — Nir Itzik's Portfolio
 
-🌟 Overview
-This portfolio serves as a dynamic platform to highlight:
+Personal portfolio website hosted on GitHub Pages. Built to showcase my projects, skills, and experience as a software developer and CS student.
 
-My journey as a Computer Science student at Reichman University.
-Key projects I've developed, including MemoryMaster and Cat Fish Game.
-My professional experiences, skills, and educational background.
-Interests and hobbies, ranging from technology and AI to basketball and fitness.
+🌐 **Live:** [niritsiq.github.io](https://niritsiq.github.io)
 
-🛠️ Technologies Used
-HTML5, CSS3, JavaScript: For building the website's structure and interactive features.
-Font Awesome: For icons and visual elements.
-Google Fonts: To enhance typography.
-AOS.js: For smooth animations and transitions.
+---
 
-📂 Key Sections
-About Me: An introduction to my background and passions.
-Skills: A showcase of technical and professional proficiencies.
-Projects: Highlighting key projects, including:
-MemoryMaster: A memory card game built with Java.
-Cat Fish Game: An engaging two-player game developed using Jack.
-Experience: My professional journey, including roles in product management and cyber investigations.
-Education: Details about my Computer Science studies and certifications.
-Hobbies: Interests outside of work and studies.
+## Sections
 
-📷 Visuals
-Profile photo and logos of institutions like Reichman University, Google, and Monday.com are included to personalize the design.
+- **About Me** — Background, what I build, and what I'm looking for
+- **Skills** — Full tech stack across backend, AI/GenAI, frontend, databases, cloud & DevOps, and cybersecurity
+- **Experience** — Network Operations Engineer at Cybereason, Product Manager at Mimunit, Fraud & Cyber Investigator at IDF
+- **Projects** — 9 projects including ThreatSignal AI, Video Search Engine, AI Investigator, ShowSuggesterAI, Mega Coder, Algotrading, Garage Management System, Gear-Lens App, and more
+- **Education** — B.Sc. Computer Science & Entrepreneurship, Reichman University (2026)
+- **Honors** — Dean's List 2024/25, Excellent Investigator Awards (IDF, 2021 & 2022)
+- **Hobbies** — Basketball, fitness, podcasts
 
-🌐 Live Demo
-Check out the live version of my portfolio: niritsiq.github.io
+---
 
-🤝 Contact Me
-Feel free to connect with me through:
+## Tech Stack (Site)
 
-LinkedIn: Nir Itzik
-GitHub: niritsiq
-Email: niritzik23@gmail.com
+HTML5, CSS3, JavaScript, Font Awesome, AOS.js, Google Fonts
+
+---
+
+## Contact
+
+- Email: niritzik23@gmail.com
+- GitHub: [niritsiq](https://github.com/niritsiq)
+- LinkedIn: [Nir Itzik](https://www.linkedin.com/in/nir-itzik)
