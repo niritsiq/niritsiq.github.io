@@ -1090,10 +1090,9 @@
         /* New Projects Section Styles */
         .projects-showcase {
             display: grid;
-            grid-template-columns: repeat(2, minmax(300px, 400px));
+            grid-template-columns: repeat(3, 1fr);
             gap: 2rem;
             padding: 2rem 0;
-            justify-content: center;
             align-items: start;
             min-height: auto;
             margin: 0 auto;
@@ -1227,9 +1226,15 @@
         }
 
         /* Responsive adjustments */
+        @media (max-width: 1024px) {
+            .projects-showcase {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
         @media (max-width: 768px) {
             .projects-showcase {
-                grid-template-columns: minmax(280px, 350px);
+                grid-template-columns: 1fr;
                 padding: 1rem;
             }
         }
@@ -2267,20 +2272,25 @@
                 <h2 data-aos="fade-down">My Projects</h2>
 
                 <div class="projects-showcase">
-                    <!-- MemoryMaster Project -->
+                    <!-- ThreatSignal AI Project -->
                     <div class="project-showcase-card" data-aos="fade-up">
                         <div class="project-header">
-                            <i class="fas fa-memory project-icon"></i>
-                            <h3>MemoryMaster</h3>
+                            <i class="fas fa-shield-alt project-icon"></i>
+                            <h3>ThreatSignal AI</h3>
                         </div>
                         <div class="project-content">
-                            <p class="project-description">A Java-based Memory Card Game that supports 1-4 players. Test
-                                your memory by finding matching pairs of cards!</p>
+                            <p class="project-description">Automated cyber incident risk estimator combining Shodan attack surface data, OpenAI embeddings + FAISS breach similarity, SerpAPI news signals, GPT-4 reasoning, and Polymarket crowd predictions. Deployed live on Azure with a REST API.</p>
                             <div class="project-tech">
-                                <span class="tech-badge">Java</span>
+                                <span class="tech-badge">Python</span>
+                                <span class="tech-badge">GPT-4</span>
+                                <span class="tech-badge">FAISS</span>
+                                <span class="tech-badge">Shodan API</span>
+                                <span class="tech-badge">SerpAPI</span>
+                                <span class="tech-badge">Azure</span>
+                                <span class="tech-badge">Docker</span>
                             </div>
                             <div class="project-actions">
-                                <a href="https://github.com/niritsiq/MemoryMaster" target="_blank" class="github-btn">
+                                <a href="https://github.com/niritsiq/ThreatSignal-AI.git" target="_blank" class="github-btn">
                                     <i class="fab fa-github"></i>
                                     View Code
                                 </a>
@@ -2288,21 +2298,144 @@
                         </div>
                     </div>
 
-                    <!-- Cat Fish Game Project -->
-                    <div class="project-showcase-card" data-aos="fade-up" data-aos-delay="100">
+                    <!-- Video Search Engine Project -->
+                    <div class="project-showcase-card" data-aos="fade-up">
                         <div class="project-header">
-                            <i class="fas fa-fish project-icon"></i>
-                            <h3>Cat Fish Game</h3>
+                            <i class="fas fa-film project-icon"></i>
+                            <h3>Video Search Engine</h3>
                         </div>
                         <div class="project-content">
-                            <p class="project-description">A fun two-player cat-and-fish game where players control cats
-                                trying to catch falling fish while preventing them from hitting the bottom of the
-                                screen.</p>
+                            <p class="project-description">A multimodal video search engine that downloads YouTube videos, detects scenes, generates AI captions with Moondream2, and supports two search modes: local fuzzy caption search and cloud-based Gemini 2.5 Flash video understanding. Results are displayed as a visual collage of matching frames.</p>
                             <div class="project-tech">
-                                <span class="tech-badge">Jack</span>
+                                <span class="tech-badge">Python</span>
+                                <span class="tech-badge">Gemini 2.5 Flash</span>
+                                <span class="tech-badge">Moondream2</span>
+                                <span class="tech-badge">PySceneDetect</span>
+                                <span class="tech-badge">yt-dlp</span>
+                                <span class="tech-badge">rapidfuzz</span>
                             </div>
                             <div class="project-actions">
-                                <a href="https://github.com/niritsiq/CatFishGame" target="_blank" class="github-btn">
+                                <a href="https://github.com/niritsiq/Video_search_engine.git" target="_blank" class="github-btn">
+                                    <i class="fab fa-github"></i>
+                                    View Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- AI Investigator Project -->
+                    <div class="project-showcase-card" data-aos="fade-up">
+                        <div class="project-header">
+                            <i class="fas fa-search project-icon"></i>
+                            <h3>AI Investigator 1.0</h3>
+                        </div>
+                        <div class="project-content">
+                            <p class="project-description">A RAG system that answers questions about a mystery story using three approaches: a custom Naive RAG with hybrid cosine + keyword retrieval, LightRAG for fast semantic search, and Nano-GraphRAG which builds a knowledge graph to traverse entity relationships for deeper context.</p>
+                            <div class="project-tech">
+                                <span class="tech-badge">Python</span>
+                                <span class="tech-badge">RAG</span>
+                                <span class="tech-badge">SentenceTransformer</span>
+                                <span class="tech-badge">LightRAG</span>
+                                <span class="tech-badge">Nano-GraphRAG</span>
+                                <span class="tech-badge">Knowledge Graph</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="https://github.com/niritsiq/Story-Investigator.git" target="_blank" class="github-btn">
+                                    <i class="fab fa-github"></i>
+                                    View Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ShowSuggesterAI Project -->
+                    <div class="project-showcase-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="project-header">
+                            <i class="fas fa-robot project-icon"></i>
+                            <h3>ShowSuggesterAI</h3>
+                        </div>
+                        <div class="project-content">
+                            <p class="project-description">A Python recommendation engine that learns your TV taste, suggests the most similar shows with fast vector search, then creates two brand-new fictional series and cinematic AI posters based on your favorites and recommendations.</p>
+                            <div class="project-tech">
+                                <span class="tech-badge">Python</span>
+                                <span class="tech-badge">OpenAI Embeddings</span>
+                                <span class="tech-badge">USearch (HNSW)</span>
+                                <span class="tech-badge">Google Vertex AI</span>
+                                <span class="tech-badge">Imagen 3</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="https://github.com/niritsiq/ShowSuggesterAI.git" target="_blank" class="github-btn">
+                                    <i class="fab fa-github"></i>
+                                    View Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mega Coder Project -->
+                    <div class="project-showcase-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="project-header">
+                            <i class="fas fa-code project-icon"></i>
+                            <h3>Mega Coder</h3>
+                        </div>
+                        <div class="project-content">
+                            <p class="project-description">An AI-powered Python coding assistant with four modes: program generation and auto-fixing, GitHub repository analysis, real-time screen OCR code tips, and prompt improvement for faster project planning.</p>
+                            <div class="project-tech">
+                                <span class="tech-badge">Python</span>
+                                <span class="tech-badge">Google Gemini</span>
+                                <span class="tech-badge">OpenAI GPT</span>
+                                <span class="tech-badge">RapidOCR</span>
+                                <span class="tech-badge">gitingest</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="https://github.com/niritsiq/Mega_coder.git" target="_blank" class="github-btn">
+                                    <i class="fab fa-github"></i>
+                                    View Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Algotrading Project -->
+                    <div class="project-showcase-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="project-header">
+                            <i class="fas fa-chart-line project-icon"></i>
+                            <h3>Algotrading</h3>
+                        </div>
+                        <div class="project-content">
+                            <p class="project-description">A real-time CrewAI trading bot where market, news/sentiment, risk, and execution agents collaborate on BUY/SELL/HOLD decisions using live Alpaca and SerpAPI data, then execute validated trades on an Alpaca paper account.</p>
+                            <div class="project-tech">
+                                <span class="tech-badge">Python</span>
+                                <span class="tech-badge">CrewAI</span>
+                                <span class="tech-badge">Alpaca API</span>
+                                <span class="tech-badge">SerpAPI</span>
+                                <span class="tech-badge">Ollama</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="https://github.com/niritsiq/Algotrading.git" target="_blank" class="github-btn">
+                                    <i class="fab fa-github"></i>
+                                    View Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Garage Management System Project -->
+                    <div class="project-showcase-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="project-header">
+                            <i class="fas fa-car project-icon"></i>
+                            <h3>Garage Management System</h3>
+                        </div>
+                        <div class="project-content">
+                            <p class="project-description">A layered C# OOP garage system with separated Logic/UI projects that manages multiple vehicle types, file-based loading, status workflows, wheel inflation, refuel/recharge operations, and robust validation with custom exceptions.</p>
+                            <div class="project-tech">
+                                <span class="tech-badge">C#</span>
+                                <span class="tech-badge">.NET</span>
+                                <span class="tech-badge">OOP</span>
+                                <span class="tech-badge">SOLID Principles</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="https://github.com/niritsiq/Garage-Management-System-" target="_blank" class="github-btn">
                                     <i class="fab fa-github"></i>
                                     View Code
                                 </a>
@@ -2311,7 +2444,7 @@
                     </div>
 
                     <!-- Gear-Lens App Project -->
-                    <div class="project-showcase-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-showcase-card" data-aos="fade-up" data-aos-delay="400">
                         <div class="project-header">
                             <img src="images/gear-lens-logo.png" alt="Gear-Lens" class="project-icon-image">
                             <h3>Gear-Lens App</h3>
@@ -2337,8 +2470,51 @@
                         </div>
                     </div>
 
+                    <!-- MemoryMaster Project -->
+                    <div class="project-showcase-card" data-aos="fade-up" data-aos-delay="500">
+                        <div class="project-header">
+                            <i class="fas fa-memory project-icon"></i>
+                            <h3>MemoryMaster</h3>
+                        </div>
+                        <div class="project-content">
+                            <p class="project-description">A Java-based Memory Card Game that supports 1-4 players. Test
+                                your memory by finding matching pairs of cards!</p>
+                            <div class="project-tech">
+                                <span class="tech-badge">Java</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="https://github.com/niritsiq/MemoryMaster" target="_blank" class="github-btn">
+                                    <i class="fab fa-github"></i>
+                                    View Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cat Fish Game Project -->
+                    <div class="project-showcase-card" data-aos="fade-up" data-aos-delay="600">
+                        <div class="project-header">
+                            <i class="fas fa-fish project-icon"></i>
+                            <h3>Cat Fish Game</h3>
+                        </div>
+                        <div class="project-content">
+                            <p class="project-description">A fun two-player cat-and-fish game where players control cats
+                                trying to catch falling fish while preventing them from hitting the bottom of the
+                                screen.</p>
+                            <div class="project-tech">
+                                <span class="tech-badge">Jack</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="https://github.com/niritsiq/CatFishGame" target="_blank" class="github-btn">
+                                    <i class="fab fa-github"></i>
+                                    View Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
                     <!-- Bulls and Cows Game Project -->
-                    <div class="project-showcase-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="project-showcase-card" data-aos="fade-up" data-aos-delay="700">
                         <div class="project-header">
                             <i class="fas fa-gamepad project-icon"></i>
                             <h3>Bulls and Cows Game</h3>

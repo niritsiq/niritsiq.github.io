@@ -5,6 +5,27 @@ import './Projects.css';
 const Projects = () => {
     const projects = [
         {
+            title: 'ThreatSignal AI',
+            description: 'Automated cyber incident risk estimator combining Shodan attack surface data, OpenAI embeddings + FAISS breach similarity, SerpAPI news signals, GPT-4 reasoning, and Polymarket crowd predictions. Deployed live on Azure with a REST API.',
+            icon: 'fas fa-shield-alt',
+            technologies: ['Python', 'GPT-4', 'FAISS', 'Shodan API', 'SerpAPI', 'Azure', 'Docker'],
+            githubLink: 'https://github.com/niritsiq/ThreatSignal-AI.git'
+        },
+        {
+            title: 'Video Search Engine',
+            description: 'A multimodal video search engine that downloads YouTube videos, detects scenes, generates AI captions with Moondream2, and supports two search modes: local fuzzy caption search and cloud-based Gemini 2.5 Flash video understanding. Results are displayed as a visual collage of matching frames.',
+            icon: 'fas fa-film',
+            technologies: ['Python', 'Gemini 2.5 Flash', 'Moondream2', 'PySceneDetect', 'yt-dlp', 'rapidfuzz'],
+            githubLink: 'https://github.com/niritsiq/Video_search_engine.git'
+        },
+        {
+            title: 'AI Investigator 1.0',
+            description: 'A RAG system that answers questions about a mystery story using three approaches: a custom Naive RAG with hybrid cosine + keyword retrieval, LightRAG for fast semantic search, and Nano-GraphRAG which builds a knowledge graph to traverse entity relationships for deeper context.',
+            icon: 'fas fa-search',
+            technologies: ['Python', 'RAG', 'SentenceTransformer', 'LightRAG', 'Nano-GraphRAG', 'Knowledge Graph'],
+            githubLink: 'https://github.com/niritsiq/Story-Investigator.git'
+        },
+        {
             title: 'MemoryMaster',
             description: 'A Java-based Memory Card Game that supports 1-4 players. Test your memory by finding matching pairs of cards!',
             icon: 'fas fa-memory',
