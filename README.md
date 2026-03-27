@@ -28,4 +28,4 @@ HTML5, CSS3, JavaScript, Font Awesome, AOS.js, Google Fonts
 
 - Email: niritzik23@gmail.com
 - GitHub: [niritsiq](https://github.com/niritsiq)
-- LinkedIn: [Nir Itzik](https://www.linkedin.com/in/nir-itzik)
+- LinkedIn: [Nir Itzik](https://www.linkedin.com/in/nir-itzik-2556b329a/)
