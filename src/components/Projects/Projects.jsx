@@ -1,7 +1,6 @@
 import React from 'react';
 import ProjectCard from '../ProjectCard/ProjectCard';
 import './Projects.css';
-import { FaMemory, FaFish } from 'react-icons/fa';
 
 const Projects = () => {
     const projects = [
@@ -25,6 +24,34 @@ const Projects = () => {
             customImage: '/images/gear-lens-logo.png',
             technologies: ['React', 'Node.js', 'SQLite', 'OpenAI Vision API', 'AI/ML', 'Google OAuth', 'PWA'],
             githubLink: 'https://github.com/Gear-Lens/App-independent/tree/improvements'
+        },
+        {
+            title: 'ShowSuggesterAI',
+            description: 'A Python recommendation engine that learns your TV taste, suggests the most similar shows with fast vector search, then creates two brand-new fictional series and cinematic AI posters based on your favorites and recommendations.',
+            icon: 'fas fa-robot',
+            technologies: ['Python', 'TheFuzz', 'OpenAI Embeddings', 'USearch (HNSW)', 'Google Vertex AI Gemini 2.0', 'Google Vertex AI Imagen 3'],
+            githubLink: 'https://github.com/niritsiq/ShowSuggesterAI.git'
+        },
+        {
+            title: 'Mega Coder',
+            description: 'An AI-powered Python coding assistant with four modes: program generation and auto-fixing, GitHub repository analysis, real-time screen OCR code tips, and prompt improvement for faster project planning.',
+            icon: 'fas fa-code',
+            technologies: ['Python', 'Google Gemini', 'OpenAI GPT-5 mini', 'gitingest', 'RapidOCR', 'pylint', 'python-dotenv'],
+            githubLink: 'https://github.com/niritsiq/Mega_coder.git'
+        },
+        {
+            title: 'Algotrading',
+            description: 'A real-time CrewAI trading bot where market, news/sentiment, risk, and execution agents collaborate on BUY/SELL/HOLD decisions using live Alpaca and SerpAPI data, then execute validated trades on an Alpaca paper account.',
+            icon: 'fas fa-chart-line',
+            technologies: ['Python', 'CrewAI', 'Alpaca Paper Trading API', 'SerpAPI (News + Google Trends)', 'Ollama (llama3.2)', 'Pytest'],
+            githubLink: 'https://github.com/niritsiq/Algotrading.git'
+        },
+        {
+            title: 'Garage Management System',
+            description: 'A layered C# OOP garage system with separated Logic/UI projects that manages multiple vehicle types, file-based loading, status workflows, wheel inflation, refuel/recharge operations, and robust validation with custom exceptions.',
+            icon: 'fas fa-car',
+            technologies: ['C#', '.NET', 'OOP', 'Layered Architecture', 'Console App', 'SOLID Principles'],
+            githubLink: 'https://github.com/niritsiq/Garage-Management-System-'
         }
     ];
 
