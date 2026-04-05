@@ -12,6 +12,13 @@ const Projects = () => {
             githubLink: 'https://github.com/niritsiq/ThreatSignal-AI.git'
         },
         {
+            title: 'Psychology Session Analyzer',
+            description: 'Conversation analysis, topic identification and conversation themes, key moments detection, conversation timeline generation, speaker statistics and talk-time ratios, and dynamic relationship/conversation flow analysis on a microservices architecture: upload_service, video_processor_service, transcription_service, and analysis_service with FastAPI, RabbitMQ, Redis, PostgreSQL, MinIO, AssemblyAI, OpenAI, Datadog, and Docker Compose.',
+            icon: 'fas fa-brain',
+            technologies: ['FastAPI', 'RabbitMQ', 'Redis', 'PostgreSQL', 'MinIO', 'AssemblyAI', 'OpenAI', 'Datadog', 'Docker Compose', 'FFmpeg', 'Microservices'],
+            githubLink: 'https://github.com/niritsiq/Psychology-Session-Analyzer.git'
+        },
+        {
             title: 'Video Search Engine',
             description: 'A multimodal video search engine that downloads YouTube videos, detects scenes, generates AI captions with Moondream2, and supports two search modes: local fuzzy caption search and cloud-based Gemini 2.5 Flash video understanding. Results are displayed as a visual collage of matching frames.',
             icon: 'fas fa-film',
