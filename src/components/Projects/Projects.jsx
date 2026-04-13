@@ -5,6 +5,13 @@ import './Projects.css';
 const Projects = () => {
     const projects = [
         {
+            title: 'Medical Event Extractor',
+            description: 'A local Python pipeline that reads medical PDFs (including scanned files), classifies unique clinical events, and outputs a structured JSON timeline. Built as an internal demo for insurance automation with OCR, heuristic event detection, Gemini-assisted field extraction, and deduplication across overlapping records.',
+            icon: 'fas fa-file-medical',
+            technologies: ['Python', 'Tesseract OCR', 'pdfplumber', 'Gemini API', 'Regex', 'Pytest', 'JSON'],
+            githubLink: 'https://github.com/niritsiq/Elyon-AI.git'
+        },
+        {
             title: 'ThreatSignal AI',
             description: 'Automated cyber incident risk estimator combining Shodan attack surface data, OpenAI embeddings + FAISS breach similarity, SerpAPI news signals, GPT-4 reasoning, and Polymarket crowd predictions. Deployed live on Azure with a REST API.',
             icon: 'fas fa-shield-alt',
