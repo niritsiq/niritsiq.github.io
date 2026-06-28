@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <title>Nir Itzik - Portfolio</title>
@@ -1852,6 +1852,11 @@
         /* Previous styles... */
 
         /* Update mobile responsive styles */
+        /* Hamburger toggle — hidden on desktop, shown on mobile */
+        .nav-toggle {
+            display: none;
+        }
+
         @media (max-width: 768px) {
 
             /* Header adjustments */
@@ -1865,30 +1870,62 @@
                 padding: 0 1rem;
             }
 
-            /* Navigation menu adjustments */
+            /* Navigation — hamburger menu */
             .nav-menu {
+                height: 60px;
+                padding: 0 1rem;
+                justify-content: flex-end;
+                align-items: center;
+                overflow: visible;
+            }
+
+            .nav-toggle {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: transparent;
+                border: none;
+                color: white;
+                font-size: 1.6rem;
+                cursor: pointer;
                 padding: 0.5rem;
-                height: auto;
-                overflow-x: auto;
-                -webkit-overflow-scrolling: touch;
+                z-index: 1001;
             }
 
             .nav-menu ul {
-                display: flex;
-                flex-direction: row;
-                /* Keep horizontal on mobile */
-                padding: 0 1rem;
+                position: fixed;
+                top: 60px;
+                left: 0;
+                right: 0;
+                flex-direction: column;
+                gap: 0;
                 margin: 0;
-                white-space: nowrap;
+                padding: 0;
+                background: rgba(44, 62, 80, 0.98);
+                backdrop-filter: blur(10px);
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.35s ease;
+            }
+
+            .nav-menu.open ul {
+                max-height: 80vh;
             }
 
             .nav-menu li {
-                margin: 0 0.5rem;
+                margin: 0;
+                width: 100%;
+                border-top: 1px solid rgba(255, 255, 255, 0.08);
             }
 
             .nav-menu a {
-                padding: 0.5rem 0.8rem;
-                font-size: 0.9rem;
+                display: block;
+                width: 100%;
+                padding: 1rem 1.2rem;
+                border-radius: 0;
+                background: transparent;
+                font-size: 1.1rem;
             }
 
             /* Skills section adjustments */
@@ -1899,7 +1936,15 @@
 
             .hexagon {
                 width: 100%;
-                max-width: 330px;
+                max-width: 460px;
+                height: auto;
+                min-height: 0;
+                clip-path: none;
+                border-radius: 18px;
+                border: 1px solid rgba(79, 172, 254, 0.25);
+                filter: none;
+                box-shadow: 0 8px 18px rgba(0, 0, 0, 0.3);
+                padding: 1.6rem 1.4rem;
                 margin: 0 auto;
             }
 
@@ -1983,17 +2028,29 @@
                 display: none;
             }
 
-            /* Fix for iOS Safari 100vh issue */
-            .section,
+            /* Let sections size to their content on phones; keep the hero full-height */
+            section,
+            .section {
+                min-height: auto;
+                justify-content: flex-start;
+                margin-top: 0;
+            }
+
             header {
                 min-height: -webkit-fill-available;
+            }
+
+            /* Smaller hero photo on phones */
+            .profile-container,
+            .profile-photo {
+                width: 190px;
+                height: 190px;
             }
         }
 
         /* Add iOS-specific fixes */
         @supports (-webkit-touch-callout: none) {
 
-            .section,
             header {
                 min-height: -webkit-fill-available;
             }
@@ -2015,7 +2072,11 @@
     <i class="fas fa-terminal floating-icon" style="top: 70%; left: 20%;"></i>
 
     <nav class="nav-menu">
-        <ul>
+        <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false"
+            aria-controls="navList">
+            <i class="fas fa-bars"></i>
+        </button>
+        <ul id="navList">
             <li><a href="#about" class="nav-link">About</a></li>
             <li><a href="#skills" class="nav-link">Skills</a></li>
             <li><a href="#experience" class="nav-link">Experience</a></li>
@@ -2926,6 +2987,27 @@
 
         // Add scroll event listener
         window.addEventListener('scroll', updateActiveNav);
+
+        // Hamburger menu toggle (mobile)
+        const navMenu = document.querySelector('.nav-menu');
+        const navToggle = document.getElementById('navToggle');
+
+        function closeNavMenu() {
+            navMenu.classList.remove('open');
+            navToggle.setAttribute('aria-expanded', 'false');
+            navToggle.querySelector('i').className = 'fas fa-bars';
+        }
+
+        navToggle.addEventListener('click', () => {
+            const isOpen = navMenu.classList.toggle('open');
+            navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+            navToggle.querySelector('i').className = isOpen ? 'fas fa-times' : 'fas fa-bars';
+        });
+
+        // Close the menu after tapping a link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', closeNavMenu);
+        });
 
         // Smooth scroll to section when clicking nav links
         document.querySelectorAll('.nav-link').forEach(link => {
