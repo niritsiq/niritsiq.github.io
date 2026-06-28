@@ -1647,10 +1647,11 @@
         .skills-hexagon-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-            max-width: 1200px;
+            gap: 1.5rem 1rem;
+            max-width: 1150px;
             margin: 0 auto;
-            padding: 2rem;
+            padding: 2rem 1rem;
+            justify-items: center;
         }
 
         .hexagon-item {
@@ -1660,11 +1661,12 @@
         }
 
         .hexagon {
-            width: 280px;
-            height: 320px;
-            background: rgba(255, 255, 255, 0.05);
-            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-            padding: 2rem;
+            width: 330px;
+            height: 384px;
+            background: linear-gradient(160deg, rgba(255, 255, 255, 0.1), rgba(79, 172, 254, 0.05));
+            clip-path: polygon(50% 0%, 100% 16%, 100% 84%, 50% 100%, 0% 84%, 0% 16%);
+            filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.35));
+            padding: 1.4rem 1.7rem;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -1694,33 +1696,35 @@
 
         .hexagon:hover {
             transform: translateY(-10px);
+            filter: drop-shadow(0 16px 28px rgba(79, 172, 254, 0.3));
         }
 
         .hexagon i {
-            font-size: 2.5rem;
+            font-size: 2.1rem;
             color: #4facfe;
-            margin-bottom: 1rem;
+            margin-bottom: 0.6rem;
         }
 
         .hexagon h3 {
             color: white;
-            font-size: 1.3rem;
-            margin-bottom: 1rem;
+            font-size: 1.25rem;
+            margin-bottom: 0.8rem;
         }
 
         .skill-tags {
             display: flex;
             flex-wrap: wrap;
-            gap: 0.5rem;
+            gap: 0.4rem;
             justify-content: center;
         }
 
         .skill-tags span {
-            background: rgba(79, 172, 254, 0.1);
-            color: #4facfe;
-            padding: 0.3rem 0.8rem;
-            border-radius: 15px;
-            font-size: 0.9rem;
+            background: rgba(79, 172, 254, 0.18);
+            color: #e3f1ff;
+            padding: 0.25rem 0.65rem;
+            border-radius: 14px;
+            font-size: 0.82rem;
+            line-height: 1.3;
             transition: all 0.3s ease;
         }
 
@@ -1730,7 +1734,7 @@
             transform: translateY(-2px);
         }
 
-        @media (max-width: 1200px) {
+        @media (max-width: 1080px) {
             .skills-hexagon-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
@@ -1895,7 +1899,7 @@
 
             .hexagon {
                 width: 100%;
-                max-width: 280px;
+                max-width: 330px;
                 margin: 0 auto;
             }
 
@@ -2027,7 +2031,7 @@
             <img src="profile-photo.jpg" alt="Nir Itzik" class="profile-photo">
         </div>
         <h1>Nir Itzik</h1>
-        <p>Computer Science & Entrepreneurship Student</p>
+        <p>Software Engineer · CS & Entrepreneurship</p>
         <div class="contact-info" data-aos="fade-up">
             <span class="contact-item">
                 <i class="fas fa-map-marker-alt"></i>
@@ -2066,9 +2070,9 @@
                 <div class="about-points" data-aos="fade-up">
                     <ul>
                         <li data-aos="fade-right" data-aos-delay="100">
-                            <span class="highlight">Who I am:</span> I'm Nir Itzik, 24, a final-year Computer Science
-                            &amp; Entrepreneurship student at Reichman University — selected for the prestigious
-                            Entrepreneurship Honors Program — actively seeking a software engineering role.
+                            <span class="highlight">Who I am:</span> I'm Nir Itzik, 24, a Computer Science
+                            &amp; Entrepreneurship graduate from Reichman University (2026) — selected for the prestigious
+                            Entrepreneurship Honors Program — seeking a full-time software engineering role.
                         </li>
 
                         <li data-aos="fade-right" data-aos-delay="200">
@@ -2079,10 +2083,11 @@
                         </li>
 
                         <li data-aos="fade-right" data-aos-delay="300">
-                            <span class="highlight">Where I've worked:</span> Currently a Network Operations Engineer at
-                            Cybereason, maintaining multi-cloud environments (AWS, GCP, OCI) and building automation
-                            scripts. Previously led product development that drove 150% revenue growth, and founded a
-                            cyber research branch in the IDF leading a team of 10.
+                            <span class="highlight">Where I've worked:</span> Software Engineer Intern at 44 Ventures,
+                            building AI-powered systems, web scraping and CRM automation flows. Also a Network Operations
+                            Engineer at Cybereason, maintaining multi-cloud environments (AWS, GCP, OCI) and building
+                            automation scripts. Previously led product development that drove 150% revenue growth, and
+                            founded a cyber research branch in the IDF leading a team of 10.
                         </li>
 
                         <li data-aos="fade-right" data-aos-delay="400">
@@ -2123,10 +2128,15 @@
                                     <span>Java</span>
                                     <span>C# (.NET)</span>
                                     <span>C</span>
+                                    <span>REST APIs</span>
                                     <span>Docker</span>
                                     <span>Microservices</span>
+                                    <span>Azure Container Apps</span>
+                                    <span>Google Cloud Run</span>
+                                    <span>Railway</span>
                                     <span>RabbitMQ</span>
                                     <span>Redis</span>
+                                    <span>MinIO</span>
                                 </div>
                             </div>
                         </div>
@@ -2145,6 +2155,10 @@
                                     <span>RAG</span>
                                     <span>FAISS / USearch</span>
                                     <span>Moondream</span>
+                                    <span>Computer Vision</span>
+                                    <span>PySceneDetect</span>
+                                    <span>AssemblyAI</span>
+                                    <span>AI IDEs (Cursor / Copilot / Codex)</span>
                                 </div>
                             </div>
                         </div>
@@ -2159,6 +2173,12 @@
                                     <span>JavaScript</span>
                                     <span>HTML</span>
                                     <span>CSS</span>
+                                    <span>PWA</span>
+                                    <span>Playwright</span>
+                                    <span>Web Scraping</span>
+                                    <span>Browser Automation</span>
+                                    <span>API Integrations</span>
+                                    <span>GraphQL</span>
                                 </div>
                             </div>
                         </div>
@@ -2191,6 +2211,7 @@
                                     <span>Grafana</span>
                                     <span>Zabbix</span>
                                     <span>Git / GitHub</span>
+                                    <span>Gitea</span>
                                 </div>
                             </div>
                         </div>
@@ -2208,6 +2229,20 @@
                                 </div>
                             </div>
                         </div>
+
+                        <!-- Tools & Platforms -->
+                        <div class="hexagon-item" data-aos="zoom-in" data-aos-delay="600">
+                            <div class="hexagon">
+                                <i class="fas fa-toolbox"></i>
+                                <h3>Tools & Platforms</h3>
+                                <div class="skill-tags">
+                                    <span>Postman</span>
+                                    <span>Monday</span>
+                                    <span>Low-Code (Lovable / Base44 / Bolt)</span>
+                                    <span>A/B Testing (Mida)</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -2220,6 +2255,38 @@
                 <h2 data-aos="fade-down">Experience</h2>
                 <div class="experience-timeline">
                     <div class="experience-card" data-aos="fade-right">
+                        <div class="experience-header">
+                            <div class="experience-icon">
+                                <i class="fas fa-laptop-code"></i>
+                            </div>
+                            <div class="experience-date">
+                                <span>03/2026 - 07/2026</span>
+                            </div>
+                        </div>
+                        <div class="experience-content">
+                            <h3>Software Engineer Intern</h3>
+                            <h4>44 Ventures</h4>
+                            <div class="experience-details">
+                                <ul>
+                                    <li><i class="fas fa-check-circle"></i> Built and supported AI-powered systems
+                                        spanning web scraping, data enrichment, and CRM automation</li>
+                                    <li><i class="fas fa-check-circle"></i> Developed backend automation flows using AI
+                                        tools, third-party APIs, and service integrations</li>
+                                    <li><i class="fas fa-check-circle"></i> Improved system reliability, deployment
+                                        workflows, and production-ready development processes</li>
+                                </ul>
+                            </div>
+                            <div class="experience-skills">
+                                <span>AI</span>
+                                <span>Web Scraping</span>
+                                <span>CRM Automation</span>
+                                <span>APIs</span>
+                                <span>Backend Automation</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="experience-card" data-aos="fade-right" data-aos-delay="100">
                         <div class="experience-header">
                             <div class="experience-icon">
                                 <i class="fas fa-network-wired"></i>
@@ -2254,7 +2321,7 @@
                         </div>
                     </div>
 
-                    <div class="experience-card" data-aos="fade-right" data-aos-delay="100">
+                    <div class="experience-card" data-aos="fade-right" data-aos-delay="200">
                         <div class="experience-header">
                             <div class="experience-icon">
                                 <i class="fas fa-briefcase"></i>
@@ -2284,7 +2351,7 @@
                         </div>
                     </div>
 
-                    <div class="experience-card" data-aos="fade-right" data-aos-delay="200">
+                    <div class="experience-card" data-aos="fade-right" data-aos-delay="300">
                         <div class="experience-header">
                             <div class="experience-icon">
                                 <i class="fas fa-shield-alt"></i>
@@ -2311,6 +2378,31 @@
                                 <span>Digital Forensics</span>
                                 <span>Leadership</span>
                                 <span>Fraud Detection</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="experience-card" data-aos="fade-right" data-aos-delay="400">
+                        <div class="experience-header">
+                            <div class="experience-icon">
+                                <i class="fas fa-hands-helping"></i>
+                            </div>
+                            <div class="experience-date">
+                                <span>Volunteer</span>
+                            </div>
+                        </div>
+                        <div class="experience-content">
+                            <h3>Volunteer — Nonprofit Web Projects</h3>
+                            <h4>Various Nonprofits</h4>
+                            <div class="experience-details">
+                                <ul>
+                                    <li><i class="fas fa-check-circle"></i> Volunteered on virtual projects for
+                                        nonprofits, focusing on website development and UX/UI adjustments</li>
+                                </ul>
+                            </div>
+                            <div class="experience-skills">
+                                <span>Web Development</span>
+                                <span>UX/UI</span>
                             </div>
                         </div>
                     </div>
@@ -2672,6 +2764,10 @@
                             Selected for prestigious Entrepreneurship Honors Program
                             <br>
                             Selected for the Dean's List 2024/25
+                        </li>
+                        <li>
+                            <img src="images/anthropic.jpg" alt="Anthropic" class="list-icon">
+                            Anthropic: "Claude Code in Action"
                         </li>
                         <li>
                             <img src="google-icon.png" alt="Google" class="list-icon">
